@@ -1,0 +1,347 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>ESI4221 Industrial Statistics/Quality Control</title>
+<style>
+<!--
+table.MsoTableGrid
+	{border:1.0pt solid black;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	}
+ table.MsoNormalTable
+	{mso-style-parent:"";
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	}
+.font5
+	{color:black;
+	font-size:11.0pt;
+	font-weight:700;
+	font-style:normal;
+	text-decoration:none;
+	font-family:Arial, sans-serif;
+	}
+-->
+</style>
+</head>
+
+<body>
+
+<div align="center">
+	<table border="1" width="62%" style="border-width: 0px">
+		<tr>
+			<td style="border-style: none; border-width: medium" align="center" colspan="2">
+			<font face="Times New Roman" size="4"><b>ESI4221 Industrial 
+			Statistics / Quality Control</b></font></td>
+		</tr>
+		<tr>
+			<td style="border-style: none; border-width: medium" align="center" colspan="2">
+			<p style="margin-top: 0; margin-bottom: 0">
+			<font face="Times New Roman" style="font-size: 11pt">Hui Yang</font></p>
+			<p style="margin-top: 0; margin-bottom: 0">
+			&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="border-style: none; border-width: medium" align="center" colspan="2">
+			<p style="margin-top: 0; margin-bottom: 0" align="left">
+		<span style="font-size: 11pt"><font color="#0000FF"><i><b>Textbook:</b></i></font> 
+			Douglas C. Montgomery, <i>Introduction to Statistical Quality 
+		Control</i>, 6th Edition, 2008, John Wiley &amp; Sons, Inc</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="border-style: none; border-width: medium" align="center" colspan="2">
+			<p style="margin-top: 0; margin-bottom: 0;" align="left">
+			<span style="font-family: Times New Roman">
+			<font style="font-size: 11pt; font-weight:700; font-style:italic" color="#0000FF">
+			References:</font></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="border-style: none; border-width: medium" align="left" width="2%">
+			<p class="MsoBodyTextIndent3" style="margin-top: 0; margin-bottom: 0" align="left">&nbsp;</p></td>
+			<td style="border-style: none; border-width: medium" align="left" width="97%">
+			<p style="margin-top: 0; margin-bottom: 0;" align="left">
+			<span style="font-size: 11pt">K.S. Krishnamoorthi and V. Ram 
+			Krishnamoorthi, <i>A First Course in Quality Engineering</i>, 2nd 
+			Edition, 2011, CRC Press</span></p>
+			<p style="margin-top: 0; margin-bottom: 0;" align="left">
+			<span style="font-size: 11pt">Douglas C. Montgomery and George C. 
+			Runger, <i>Applied Statistics and Probability for Engineers</i>, 5th 
+			Edition, 2010, John Wiley &amp; Sons, Inc., New York.</span></p></td>
+		</tr>
+		<tr>
+			<td style="border-style: none; border-width: medium" align="center" colspan="2">
+			&nbsp;</td>
+		</tr>
+		<tr>
+			<td style="border-style: none; border-width: medium" align="center" colspan="2">
+			<p align="left" style="margin-top: 0; margin-bottom: 0">
+			<font color="#0000FF">
+			<span style="font-size: 11pt; font-weight: 700; font-style: italic; font-family: Times New Roman">
+			Course Objectives:</span></font><br>
+			This course will present the theory and methods of quality 
+			monitoring including process capability, control charts, acceptance 
+			sampling, quality engineering, and quality design. The course 
+			objectives include:</td>
+		</tr>
+		<tr>
+			<td style="border-style: none; border-width: medium" align="left" width="2%">
+			<p class="MsoBodyTextIndent3" style="margin-top: 0; margin-bottom: 0" align="left">&nbsp;</p></td>
+			<td style="border-style: none; border-width: medium" align="left" width="97%">
+			To understand the basic concepts of quality monitoring.<br>
+			To understand the statistical underpinnings of quality monitoring.<br>
+			To learn various available statistical tools of quality monitoring.<br>
+			To learn the statistical and economical design issues associated 
+			with the monitoring tools.<br>
+			To demonstrate the ability to design and implement these tools 
+			through laboratory experiments.</td>
+		</tr>
+		<tr>
+			<td style="border-style: none; border-width: medium" align="center" colspan="2">
+			&nbsp;</td>
+		</tr>
+		<tr>
+			<td style="border-style: none; border-width: medium" align="center" colspan="2">
+			<p style="margin-top: 0; margin-bottom: 0;" align="left">
+			<span style="font-family: Times New Roman">
+			<font style="font-size: 11pt; font-weight:700; font-style:italic" color="#0000FF">
+			Topics:</font></span></p></td>
+		</tr>
+		<tr>
+			<td style="border-style: none; border-width: medium" align="left" width="2%">
+			<p class="MsoBodyTextIndent3" style="margin-top: 0; margin-bottom: 0" align="left">&nbsp;</p></td>
+			<td style="border-style: none; border-width: medium" align="left" width="97%">
+			<span style="font-size: 11pt">Introduction to Statistical Quality 
+			Control (Deming, Six Sigma, DMAIC)</span></td>
+		</tr>
+		<tr>
+			<td style="border-style: none; border-width: medium" align="left" width="2%">
+			<p class="MsoBodyTextIndent3" style="margin-top: 0; margin-bottom: 0" align="left">&nbsp;</p></td>
+			<td style="border-style: none; border-width: medium" align="left" width="97%">
+			<p class="MsoBodyTextIndent3" style="margin-top: 0; margin-bottom: 0" align="left">
+			<font style="font-size: 11pt">Quality Concepts and Statistical Analysis Software 
+			(Excel and Matlab) 
+			</font> </p></td>
+		</tr>
+		<tr>
+			<td style="border-style: none; border-width: medium" align="left" width="2%">
+			<p class="MsoBodyTextIndent3" style="margin-top: 0; margin-bottom: 0" align="left">&nbsp;</p></td>
+			<td style="border-style: none; border-width: medium" align="left" width="97%">
+			<p class="MsoBodyTextIndent3" style="margin-top: 0; margin-bottom: 0" align="left">
+			<span style="font-size: 11pt">Modeling Process Quality (statistical 
+			measures, discrete distributions, continuous distribution, 
+			probability plotting)</span></td>
+		</tr>
+		<tr>
+			<td style="border-style: none; border-width: medium" align="left" width="2%">
+			<p class="MsoBodyTextIndent3" style="margin-top: 0; margin-bottom: 0" align="left">&nbsp;</p></td>
+			<td style="border-style: none; border-width: medium" align="left" width="97%">
+			<p class="MsoBodyTextIndent3" style="margin-top: 0; margin-bottom: 0" align="left">
+			<span style="font-size: 11pt">Inferences about Process Quality 
+			(Hypothesis testing, statistical estimation and linear regression)</span></td>
+		</tr>
+		<tr>
+			<td style="border-style: none; border-width: medium" align="left" width="2%">
+			<p class="MsoBodyTextIndent3" style="margin-top: 0; margin-bottom: 0" align="left">&nbsp;</p></td>
+			<td style="border-style: none; border-width: medium" align="left" width="97%">
+			<p class="MsoBodyTextIndent3" style="margin-top: 0; margin-bottom: 0" align="left">
+			<span style="font-size: 11pt">Methods and Philosophy of SPC</span></td>
+		</tr>
+		<tr>
+			<td style="border-style: none; border-width: medium" align="left" width="2%">
+			<p class="MsoBodyTextIndent3" style="margin-top: 0; margin-bottom: 0" align="left">&nbsp;</p></td>
+			<td style="border-style: none; border-width: medium" align="left" width="97%">
+			<p class="MsoBodyTextIndent3" style="margin-top: 0; margin-bottom: 0" align="left">
+			<span style="font-size: 11pt">Control Chart for Variables (x-bar and 
+			R charts, x-bar and S charts)</span></td>
+		</tr>
+		<tr>
+			<td style="border-style: none; border-width: medium" align="left" width="2%">
+			&nbsp;</td>
+			<td style="border-style: none; border-width: medium" align="left" width="97%">
+			<span style="font-size: 11pt">Control Charts for Attributes (p 
+			chart, np chart, c chart)</span></td>
+		</tr>
+		<tr>
+			<td style="border-style: none; border-width: medium" align="left" width="2%">
+			&nbsp;</td>
+			<td style="border-style: none; border-width: medium" align="left" width="97%">
+			<span style="font-size: 11pt">Process and Measurement System 
+			Capability Analysis</span></td>
+		</tr>
+		<tr>
+			<td style="border-style: none; border-width: medium" align="left" width="2%">
+			&nbsp;</td>
+			<td style="border-style: none; border-width: medium" align="left" width="97%">
+			<span style="font-size: 11pt">CUSUM and EWMA Control Charts</span></td>
+		</tr>
+		<tr>
+			<td style="border-style: none; border-width: medium" align="left" width="2%">
+			&nbsp;</td>
+			<td style="border-style: none; border-width: medium" align="left" width="97%">
+			<span style="font-size: 11pt">Laboratory and Problem Sessions</span></td>
+		</tr>
+		<tr>
+			<td style="border-style: none; border-width: medium" align="center" colspan="2">
+			<p class="MsoBodyTextIndent3" style="text-indent: -.25in; margin-left: .25in; margin-top: 0; margin-bottom: 0">
+			<img border="0" src="ESI4221_Xbar.jpg" width="388" height="250"><img border="0" src="ESI4221.jpg" width="379" height="250"></td>
+		</tr>
+		<tr>
+			<td style="border-style: none; border-width: medium" align="center" colspan="2">
+			&nbsp;</td>
+		</tr>
+		<tr>
+			<td style="border-style: none; border-width: medium" align="center" colspan="2">
+			<p class="MsoBodyTextIndent3" style="text-indent: -.25in; margin-left: .25in; margin-top: 0; margin-bottom: 0" align="left">
+			<font color="#0000FF">
+			<span style="font-size: 11pt; font-weight: 700; font-style: italic; font-family: Times New Roman">
+			Grading Policy</span></font></td>
+		</tr>
+		<tr>
+			<td style="border-style: none; border-width: medium" align="left" width="2%">
+			<p class="MsoBodyTextIndent3" style="margin-top: 0; margin-bottom: 0" align="left">&nbsp;</p></td>
+			<td style="border-style: none; border-width: medium" align="left" width="97%">
+			<p class="MsoBodyTextIndent3" style="margin-top: 0; margin-bottom: 0" align="left">
+			Exam 1 – 35%<br>
+			Exam 2 – 35%<br>
+			Quiz/homework – 30% (Quizzes will be announced in class, generally, 
+			a week in advance)<br>
+			Final Exam – 35%<p class="MsoBodyTextIndent3" style="margin-top: 0; margin-bottom: 0" align="left">
+			<br>
+			The top two scores from the three exams will be added to and the 
+			total quiz/homework score to obtain the total grade for the course 
+			(out of a total of 100 pts). Exam dates will be announced as the 
+			course progresses. Final grade will be determined based on the 
+			student performance in different evaluation elements – as shown 
+			above. No make-up exams unless previous arrangements have been made. 
+			Students will be expected to attend class and prepare assignments. 
+			Habitual failure to do so will result in a reduced grade. An 
+			incomplete grade will only be given when a student misses a portion 
+			of the semester because of illness or accident. Cheating on 
+			examinations, plagiarism and other forms of academic dishonesty are 
+			serious offenses and may subject the student to penalties ranging 
+			from failing grades to dismissal.<br>
+&nbsp;<p class="MsoBodyTextIndent3" style="margin-top: 0; margin-bottom: 0" align="left">
+			Grading scale will be used: A: 90+; B: 80+; C: 70+; D: 60+, F: &lt;60 
+			(College of Engineering Rule: Only grades of C or better will be 
+			accepted in all Math, Science, and Engineering courses).</td>
+		</tr>
+		<tr>
+			<td style="border-style: none; border-width: medium" align="center" colspan="2">
+			&nbsp;</td>
+		</tr>
+		<tr>
+			<td style="border-style: none; border-width: medium" align="center" colspan="2">
+			<p align="left"><font color="#0000FF">
+			<span style="font-family: Times New Roman; font-style: italic; font-weight: 700; font-size: 11pt">
+			Excel Demos of Statistical Control Charts</span></font></td>
+		</tr>
+		<tr>
+			<td style="border-style: none; border-width: medium" align="left" width="2%">
+			<p class="MsoBodyTextIndent3" style="margin-top: 0; margin-bottom: 0" align="left">&nbsp;</p></td>
+			<td style="border-style: none; border-width: medium" align="left" width="97%">
+			<p class="MsoBodyTextIndent3" style="margin-top: 0; margin-bottom: 0" align="left">
+			<span style="font-size: 11pt">Control charts for variables: (<a href="ESI4221/Xbar_R_Charts_Ch6_Ex6_4.xlsx">Xbar 
+			and R charts</a>, <a href="ESI4221/Xbar_MR_Chart_Ch6_Ex6_54.xlsx">
+			Xbar and MR charts</a>)<br>
+			Control charts for attributes: (<a href="ESI4221/PChart_WallPaper.xlsx">p 
+			chart</a>, <a href="ESI4221/PChart_VariableSampleSize.xlsx">p 
+			chart-variable sample size</a>,
+			<a href="ESI4221/npChart_FrozenOrange.xlsx">np chart</a>,
+			<a href="ESI4221/CChart_Materials.xlsx">c chart</a>)</span><p class="MsoBodyTextIndent3" style="margin-top: 0; margin-bottom: 0" align="left">
+			<span style="font-size: 11pt">
+			<a href="ESI4221/EWMA_Cusum_Charts_Examples_ch09.xls">CUSUM and EWMA Control Charts</a></span></td>
+		</tr>
+		<tr>
+			<td style="border-style: none; border-width: medium" align="center" colspan="2">
+			&nbsp;</td>
+		</tr>
+		<tr>
+			<td style="border-style: none; border-width: medium" align="center" colspan="2">
+			<p align="left"><font color="#0000FF">
+			<span style="font-family: Times New Roman; font-style: italic; font-weight: 700; font-size: 11pt">
+			Examples of Manufacturing Processes</span></font></td>
+		</tr>
+		<tr>
+			<td style="border-style: none; border-width: medium" align="left" width="2%">
+			<p class="MsoBodyTextIndent3" style="margin-top: 0; margin-bottom: 0" align="left">&nbsp;</p></td>
+			<td style="border-style: none; border-width: medium" align="left" width="97%">
+			<p class="MsoBodyTextIndent3" style="margin-top: 0; margin-bottom: 0" align="left">
+			<span style="font-size: 11pt">Battery Manufacturing Quality Control 
+			(<a href="http://www.youtube.com/watch?v=u0x_y18lcns">http://www.youtube.com/watch?v=u0x_y18lcns</a>)<br>
+			High Performance Milling NC Programming (<a href="http://www.youtube.com/watch?v=g4iBEC_i0ow">http://www.youtube.com/watch?v=g4iBEC_i0ow</a>)<br>
+			Toyota Camry Hybrid Factory Robots (<a href="http://www.youtube.com/watch?v=82w_r2D1Ooo">http://www.youtube.com/watch?v=82w_r2D1Ooo</a>) </span> </td>
+		</tr>
+		<tr>
+			<td style="border-style: none; border-width: medium" align="center" colspan="2">
+			&nbsp;</td>
+		</tr>
+			<tr>
+			<td style="border-style: none; border-width: medium" align="center" colspan="2">
+			<p class="MsoBodyTextIndent3" style="text-indent: -.25in; margin-left: .25in; margin-top: 0; margin-bottom: 0" align="left">
+			<font color="#0000FF">
+			<span style="font-family: Times New Roman; font-style: italic; font-weight: 700; font-size: 11pt">
+			Software</span></font></td>
+			</tr>
+			<tr>
+			<td style="border-style: none; border-width: medium" align="left" width="2%">
+			<p class="MsoBodyTextIndent3" style="margin-top: 0; margin-bottom: 0" align="left">&nbsp;</p></td>
+			<td style="border-style: none; border-width: medium" align="left" width="97%">
+			<p class="MsoBodyTextIndent3" style="margin-top: 0; margin-bottom: 0" align="left">
+			<span style="font-size: 11pt">EXCEL and MATLAB will be used for some homework assignments in this class. It 
+			is available in College of Engineering computer laboratories, or 
+			obtain the student version for use at home. </span> </td>
+			</tr>
+		<tr>
+			<td style="border-style: none; border-width: medium" align="center" colspan="2">
+			&nbsp;</td>
+		</tr>
+		<tr>
+			<td style="border-style: none; border-width: medium" align="center" colspan="2">
+			<p align="left" class="MsoBodyTextIndent3" style="text-indent: -.25in; margin-left: .25in; margin-top: 0; margin-bottom: 0">
+			<font color="#0000FF">
+			<span style="font-family: Times New Roman; font-style: italic; font-weight: 700; font-size: 11pt">Matlab Tutorial</span></font></td>
+		</tr>
+		<tr>
+			<td style="border-style: none; border-width: medium" align="center">
+			&nbsp;</td>
+			<td style="border-style: none; border-width: medium" align="center">
+			<p align="left" style="margin-top: 0; margin-bottom: 0">
+			<font face="Arial" size="2">
+			<a eudora="autourl" href="http://www.mathworks.com/academia/student_center/tutorials/launchpad.html">
+			http://www.mathworks.com/academia/student_center/tutorials/launchpad.html</a></font></p>
+			<p align="left" style="margin-top: 0; margin-bottom: 0">
+			<font face="Arial" size="2">
+			<a eudora="autourl" href="http://www.math.ufl.edu/help/matlab-tutorial/">
+			http://www.math.ufl.edu/help/matlab-tutorial/</a><br>
+			<a eudora="autourl" href="http://www.math.utah.edu/lab/ms/matlab/matlab.html">
+			http://www.math.utah.edu/lab/ms/matlab/matlab.html</a><br>
+			<a eudora="autourl" href="http://users.ece.gatech.edu/~bonnie/book/TUTORIAL/tutorial.html">
+			http://users.ece.gatech.edu/~bonnie/book/TUTORIAL/tutorial.html</a><br>
+			<a eudora="autourl" href="http://www.engin.umich.edu/group/ctm/">
+			http://www.engin.umich.edu/group/ctm/</a><br>
+			<a eudora="autourl" href="http://www.math.mtu.edu/~msgocken/intro/intro.html">
+			http://www.math.mtu.edu/~msgocken/intro/intro.html</a><br>
+			<a eudora="autourl" href="http://www.math.siu.edu/matlab/tutorials.html">
+			http://www.math.siu.edu/matlab/tutorials.html</a><br>
+			<a eudora="autourl" href="http://www.cyclismo.org/tutorial/matlab/">
+			http://www.cyclismo.org/tutorial/matlab/</a><br>
+			<a eudora="autourl" href="http://www.cs.ubc.ca/spider/cavers/MatlabGuide/guide.html">
+			http://www.cs.ubc.ca/spider/cavers/MatlabGuide/guide.html</a><br>
+			<a eudora="autourl" href="http://www.duke.edu/~hpgavin/matlab.html">
+			http://www.duke.edu/~hpgavin/matlab.html</a><br>
+			<a eudora="autourl" href="http://amath.colorado.edu/computing/Matlab/Tutorial/">
+			http://amath.colorado.edu/computing/Matlab/Tutorial/</a></font></p>
+			</td>
+		</tr>
+		</table>
+</div>
+<p align="center">&nbsp;</p>
+
+</body>
+
+</html>
