@@ -1,0 +1,555 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>ESI6247 Statistical Design Models</title>
+<style>
+<!--
+table.MsoTableGrid
+	{border:1.0pt solid black;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	}
+ table.MsoNormalTable
+	{mso-style-parent:"";
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	}
+.font5
+	{color:black;
+	font-size:11.0pt;
+	font-weight:700;
+	font-style:normal;
+	text-decoration:none;
+	font-family:Arial, sans-serif;
+	}
+-->
+</style>
+</head>
+
+<body>
+
+<div align="center">
+	<table border="1" width="62%" style="border-width: 0px">
+		<tr>
+			<td style="border-style: none; border-width: medium" align="center" colspan="2">
+			<font face="Times New Roman" size="4"><b>ESI6247 Statistical Design 
+			Models</b></font></td>
+		</tr>
+		<tr>
+			<td style="border-style: none; border-width: medium" align="center" colspan="2">
+			<p style="margin-top: 0; margin-bottom: 0">
+			<font face="Times New Roman" style="font-size: 11pt">Hui Yang</font></p>
+			<p style="margin-top: 0; margin-bottom: 0">
+			&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="border-style: none; border-width: medium" align="center" colspan="2">
+			<p style="margin-top: 0; margin-bottom: 0" align="left">
+		<span style="font-size: 11pt"><font color="#0000FF"><i><b>Textbook:</b></i></font> 
+			“Experiments: Planning, Analysis and Parameter Design Optimization” 
+			(by C.F. Jeff Wu and Michael S. Hamada), second edition, 2009, John 
+			Wiley. </span></p></td>
+		</tr>
+		<tr>
+			<td style="border-style: none; border-width: medium" align="center" colspan="2">
+			<p class="MsoBodyTextIndent3" style="text-indent: -.25in; margin-left: .25in; margin-top: 0; margin-bottom: 0">
+			<font face="Arial">
+			<img border="0" src="image/ccdesign.GIF" width="294" height="279"><img border="0" src="image/sdmsurface.gif" width="360" height="270"></font></td>
+		</tr>
+		<tr>
+			<td style="border-style: none; border-width: medium" align="center" colspan="2">
+			<p align="left"><font color="#0000FF">
+			<span style="font-family: Times New Roman; font-weight: 700; font-size: 11pt">
+			SYLLABUS:</span></font><span style="font-family: Times New Roman"><font style="font-size: 11pt; font-weight:700; font-style:italic" color="#0000FF"> </font></span>
+			<font size="2"><span style="font-family: Arial">
+			<a href="image/syllabus-ESI6247-StatisticalDesignModels.pdf">
+			Syllabus</a></span></font></td>
+		</tr>
+		<tr>
+		<td style="border-style: none; border-width: medium" width="108%" align="left" colspan="2">
+			<font color="#0000FF">
+			<span style="font-size: 11pt; font-weight: 700; font-style: italic; font-family: Times New Roman">
+			Grading Policy</span></font></td>
+		</tr>
+		<tr>
+		<td style="border-style: none; border-width: medium" width="4%" align="center">
+		<p align="center">&nbsp;</td>
+		<td style="border-style: none; border-width: medium" align="left">
+		<p style="margin-top: 0; margin-bottom: 0">2 Exams - 35 pts each </p>
+		<p style="margin-top: 0; margin-bottom: 0">Quizzes/homework - 30 pts </p>
+		<p style="margin-top: 0; margin-bottom: 0">1 Comprehensive Final Exam - 
+		35 pts<br>
+		The top two scores from the three exams will be added to and the total 
+		quiz/homework score to obtain the total grade for the course (out of a 
+		total of 100 pts). No make-up exams unless previous arrangements have 
+		been made. Students will be expected to attend class and prepare 
+		assignments. Habitual failure to do so will result in a reduced grade. 
+		An incomplete grade will only be given when a student misses a portion 
+		of the semester because of illness or accident. Cheating on 
+		examinations, plagiarism and other forms of academic dishonesty are 
+		serious offenses and may subject the student to penalties ranging from 
+		failing grades to dismissal.<br>
+		Grading scale will be used: A: 90+; B: 80+; C: 70+; D: 60+, F: &lt;60 
+		(College of Engineering Rule: <i>Only grades of C or better will be 
+		accepted in all Math, Science, and Engineering course</i>s).</td>
+		</tr>
+		<tr>
+			<td style="border-style: none; border-width: medium" align="center" colspan="2">
+			&nbsp;</td>
+		</tr>
+		<tr>
+			<td style="border-style: none; border-width: medium" align="center" colspan="2">
+			<p style="margin-top: 0; margin-bottom: 0;" align="left">
+			<font color="#0000FF">
+			<span style="font-family: Times New Roman; font-weight: 700; font-size: 11pt">
+			TOPICS:</span></font></p></td>
+		</tr>
+		<tr>
+		<td style="border-style: none; border-width: medium" width="108%" align="left" colspan="2">
+		<b><font face="Book Antiqua" color="#003300">Statistics Review
+		</font></b></td>
+		</tr>
+		<tr>
+		<td style="border-style: none; border-width: medium" width="4%" align="center">
+		<p align="center"><span style="font-size: 11pt">-</span></td>
+		<td style="border-style: none; border-width: medium" align="left">
+		<span style="font-size: 11pt">Notes for statistics prerequisites</span></td>
+		</tr>
+		<tr>
+		<td style="border-style: none; border-width: medium" width="4%" align="center">
+		<span style="font-size: 11pt">-</span></td>
+		<td style="border-style: none; border-width: medium" align="left">
+		<span style="font-size: 11pt">
+		Confidence interval and hypothesis testing</span></td>
+			</tr>
+		<tr>
+		<td style="border-style: none; border-width: medium" width="4%" align="center">
+		<span style="font-size: 11pt">-</span></td>
+		<td style="border-style: none; border-width: medium" align="left">
+		<span style="font-size: 11pt">
+		Statistical 
+		measures</span></td>
+				</tr>
+		<tr>
+		<td style="border-style: none; border-width: medium" width="4%" align="center">
+		<span style="font-size: 11pt">-</span></td>
+		<td style="border-style: none; border-width: medium" align="left">
+		<span style="font-size: 11pt">
+		Central limit theorem (CLT)</span></td>
+					</tr>
+		<tr>
+		<td style="border-style: none; border-width: medium" width="4%" align="center">
+		<span style="font-size: 11pt">-</span></td>
+		<td style="border-style: none; border-width: medium" align="left">
+		<span style="font-size: 11pt">Combination and permutation</span></td>
+						</tr>
+		<tr>
+		<td style="border-style: none; border-width: medium" width="4%" align="center">
+		<span style="font-size: 11pt">-</span></td>
+		<td style="border-style: none; border-width: medium" align="left">
+		<span style="font-size: 11pt">Chi-square distribution and Chi-square 
+		test</span></td>
+						</tr>
+		<tr>
+		<td style="border-style: none; border-width: medium" width="4%" align="center">
+		<span style="font-size: 11pt">-</span></td>
+		<td style="border-style: none; border-width: medium" align="left">
+		<span style="font-size: 11pt">t distribution and t test</span></td>
+						</tr>
+		<tr>
+		<td style="border-style: none; border-width: medium" width="4%" align="center">
+		<span style="font-size: 11pt">-</span></td>
+		<td style="border-style: none; border-width: medium" align="left">
+		<span style="font-size: 11pt">F distribution and F test</span></td>
+						</tr>
+		<tr>
+		<td style="border-style: none; border-width: medium" width="4%" align="center">
+		<span style="font-size: 11pt">-</span></td>
+		<td style="border-style: none; border-width: medium" align="left">
+		<span style="font-size: 11pt">Degree of freedom</span></td>
+						</tr>
+		<tr>
+		<td style="border-style: none; border-width: medium" align="left" colspan="2">
+		<p class="MsoNormal" align="left" style="text-align: left; text-autospace: none; margin-right: 0in; margin-top: 1pt; margin-bottom: 0">
+		&nbsp;</p></td>
+						</tr>
+		<tr>
+		<td style="border-style: none; border-width: medium" width="108%" align="left" colspan="2">
+		<b><font face="Book Antiqua" color="#003300">Chapter 1 Basic 
+		Experimental Design and Regression Analysis <font size="2">(<a href="ESI6247/Unit1%20-%20ESI6247_Lecture.pdf">Note</a>)</font></font></b></td>
+						</tr>
+		<tr>
+		<td style="border-style: none; border-width: medium" width="4%" align="center">
+		<p align="center"><span style="font-size: 11pt">-</span></td>
+		<td style="border-style: none; border-width: medium" align="left">
+		<span style="font-size: 11pt">Breast cancer mortality</span></td>
+							</tr>
+		<tr>
+		<td style="border-style: none; border-width: medium" width="4%" align="center">
+		&nbsp;</td>
+		<td style="border-style: none; border-width: medium" align="left">
+		<span style="font-size: 11pt">
+		<a href="ESI6247/BreastCancerMortality.dat">data</a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="ESI6247/Ch1_linearregression_breastcancer.m">program</a></span></td>
+							</tr>
+		<tr>
+		<td style="border-style: none; border-width: medium" width="4%" align="center">
+		<span style="font-size: 11pt">-</span></td>
+		<td style="border-style: none; border-width: medium" align="left">
+		<span style="font-size: 11pt">Air pollution</span></td>
+								</tr>
+		<tr>
+		<td style="border-style: none; border-width: medium" width="4%" align="center">
+		&nbsp;</td>
+		<td style="border-style: none; border-width: medium" align="left">
+		<span style="font-size: 11pt"><a href="ESI6247/Pollution.dat">data</a>&nbsp;&nbsp;&nbsp;&nbsp; 
+		program (<a href="ESI6247/Ch1_linearregression_airpollution.m">regression</a>,
+		<a href="ESI6247/Ch1_linearregression_airpollution_bestsubset.m">best 
+		subset selection</a>)</span></td>
+								</tr>
+		<tr>
+		<td style="border-style: none; border-width: medium" width="4%" align="center">
+		&nbsp;</td>
+		<td style="border-style: none; border-width: medium" align="left">
+		Injection Molding (<span style="font-size: 11pt"><a href="http://youtu.be/YA8X8egacfM">http://youtu.be/YA8X8egacfM</a></span>)</td>
+								</tr>
+		<tr>
+		<td style="border-style: none; border-width: medium" width="108%" align="left" colspan="2">
+		&nbsp;</td>
+		</tr>
+		<tr>
+		<td style="border-style: none; border-width: medium" width="108%" align="left" colspan="2">
+		<b><font face="Book Antiqua" color="#003300">Chapter 2 
+		Experiments with a Single factor<font size="2"> (<a href="ESI6247/Unit2%20-%20ESI6247_Lecture.pdf">Note</a>)</font></font></b></td>
+		</tr>
+		<tr>
+		<td style="border-style: none; border-width: medium" width="4%" align="center">
+		<p align="center"><span style="font-size: 11pt">-</span></td>
+		<td style="border-style: none; border-width: medium" align="left">
+		<span style="font-size: 11pt">Pulp experiment</span></td>
+									</tr>
+		<tr>
+		<td style="border-style: none; border-width: medium" width="4%" align="center">
+		&nbsp;</td>
+		<td style="border-style: none; border-width: medium" align="left">
+		<span style="font-size: 11pt"><a href="ESI6247/pulp.txt">data</a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="ESI6247/Ch2_Pulp_Demo.m">program</a></span></td>
+									</tr>
+		<tr>
+		<td style="border-style: none; border-width: medium" width="4%" align="center">
+		<span style="font-size: 11pt">-</span></td>
+		<td style="border-style: none; border-width: medium" align="left">
+		<span style="font-size: 11pt">Composite experiment</span></td>
+										</tr>
+		<tr>
+		<td style="border-style: none; border-width: medium" width="4%" align="center">
+		&nbsp;</td>
+		<td style="border-style: none; border-width: medium" align="left">
+		<span style="font-size: 11pt"><a href="ESI6247/composite.dat">data</a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="ESI6247/Ch2_Composite_Demo.m">program</a></span></td>
+										</tr>
+		<tr>
+		<td style="border-style: none; border-width: medium" width="108%" align="left" colspan="2">
+		&nbsp;</td>
+										</tr>
+		<tr>
+		<td style="border-style: none; border-width: medium" width="108%" align="left" colspan="2">
+		<b><font face="Book Antiqua" color="#003300">Chapter 3 
+		Experiments with More Than One Factor <font size="2">(<a href="ESI6247/Unit3%20-%20ESI6247_Lecture.pdf">Note</a>)</font></font></b></td>
+										</tr>
+		<tr>
+		<td style="border-style: none; border-width: medium" width="4%" align="center">
+		<p align="center"><span style="font-size: 11pt">-</span></td>
+		<td style="border-style: none; border-width: medium" align="left">
+		<span style="font-size: 11pt">Sewage Experiment</span></td>
+											</tr>
+		<tr>
+		<td style="border-style: none; border-width: medium" width="4%" align="center">
+		&nbsp;</td>
+		<td style="border-style: none; border-width: medium" align="left">
+		<span style="font-size: 11pt"><a href="ESI6247/sewage.dat">data</a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="ESI6247/Ch3_Sewage.m">program</a></span></td>
+											</tr>
+		<tr>
+		<td style="border-style: none; border-width: medium" width="4%" align="center">
+		<span style="font-size: 11pt">-</span></td>
+		<td style="border-style: none; border-width: medium" align="left">
+		<span style="font-size: 11pt">Girder Experiment</span></td>
+												</tr>
+		<tr>
+		<td style="border-style: none; border-width: medium" width="4%" align="center">
+		&nbsp;</td>
+		<td style="border-style: none; border-width: medium" align="left">
+		<span style="font-size: 11pt"><a href="ESI6247/girder.dat">data</a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="ESI6247/Ch3_Girder.m">program</a></span></td>
+												</tr>
+		<tr>
+		<td style="border-style: none; border-width: medium" width="4%" align="center">
+		<span style="font-size: 11pt">-</span></td>
+		<td style="border-style: none; border-width: medium" align="left">
+		<span style="font-size: 11pt">Bolt Experiment</span></td>
+													</tr>
+		<tr>
+		<td style="border-style: none; border-width: medium" width="4%" align="center">
+		&nbsp;</td>
+		<td style="border-style: none; border-width: medium" align="left">
+		<span style="font-size: 11pt"><a href="ESI6247/bolt.xlsx">data</a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="ESI6247/Ch3_Bolt.m">program</a></span></td>
+													</tr>
+		<tr>
+		<td style="border-style: none; border-width: medium" width="4%" align="center">
+		<span style="font-size: 11pt">-</span></td>
+		<td style="border-style: none; border-width: medium" align="left">
+		<span style="font-size: 11pt">Wear Experiment (Latin square design)</span></td>
+														</tr>
+		<tr>
+		<td style="border-style: none; border-width: medium" width="4%" align="center">
+		&nbsp;</td>
+		<td style="border-style: none; border-width: medium" align="left">
+		<span style="font-size: 11pt"><a href="ESI6247/Ch3_Wear.m">program</a></span></td>
+														</tr>
+		<tr>
+		<td style="border-style: none; border-width: medium" width="4%" align="center">
+		<span style="font-size: 11pt">-</span></td>
+		<td style="border-style: none; border-width: medium" align="left">
+		<span style="font-size: 11pt">Starch Experiment (ANCOVA)</span></td>
+															</tr>
+		<tr>
+		<td style="border-style: none; border-width: medium" width="4%" align="center">
+		&nbsp;</td>
+		<td style="border-style: none; border-width: medium" align="left">
+		<span style="font-size: 11pt"><a href="ESI6247/starch.xlsx">data</a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="ESI6247/Ch3_starch.m">program</a></span></td>
+															</tr>
+		<tr>
+		<td style="border-style: none; border-width: medium" width="4%" align="center">
+		<span style="font-size: 11pt">-</span></td>
+		<td style="border-style: none; border-width: medium" align="left">
+		<span style="font-size: 11pt">Drill Experiment (Transformation of 
+		responses)</span></td>
+																</tr>
+		<tr>
+		<td style="border-style: none; border-width: medium" width="4%" align="center">
+		&nbsp;</td>
+		<td style="border-style: none; border-width: medium" align="left">
+		<span style="font-size: 11pt"><a href="ESI6247/drill.xlsx">data</a>&nbsp;&nbsp;&nbsp;
+		<a href="ESI6247/Ch3_drill.m">&nbsp;program</a></span></td>
+																</tr>
+		<tr>
+		<td style="border-style: none; border-width: medium" align="left" colspan="2">
+		<p class="MsoNormal" align="left" style="text-align: left; text-autospace: none; margin-right: 0in; margin-top: 1pt; margin-bottom: 0">
+		&nbsp;</p></td>
+																</tr>
+		<tr>
+		<td style="border-style: none; border-width: medium" width="108%" align="left" colspan="2">
+		<b><font face="Book Antiqua" color="#003300">Chapter 4 Full 
+		Factorial Experiments at Two Levels <font size="2">(<a href="ESI6247/Unit4%20-%20ESI6247_Lecture.pdf">Note</a>)</font></font></b></td>
+																</tr>
+		<tr>
+		<td style="border-style: none; border-width: medium" width="4%" align="center">
+		<p align="center"><span style="font-size: 11pt">-</span></td>
+		<td style="border-style: none; border-width: medium" align="left">
+		<span style="font-size: 11pt">Adapted Epitaxial Layer Growth Experiment</span></td>
+																	</tr>
+		<tr>
+		<td style="border-style: none; border-width: medium" width="4%" align="center">
+		&nbsp;</td>
+		<td style="border-style: none; border-width: medium" align="left">
+		<span style="font-size: 11pt"><a href="ESI6247/adaptedlayer.xlsx">data</a>&nbsp;&nbsp;&nbsp;&nbsp; 
+		program (<a href="ESI6247/Ch4_Epitaxial_factorial_effects.m">factorial 
+		effects</a>, <a href="ESI6247/Ch4_Epitaxial_interaction.m">interaction 
+		plot,</a> <a href="ESI6247/Ch4_Epitaxial_maineffect.m">main effect plot</a>,
+		<a href="ESI6247/Ch4_Epitaxial_normalplot_lenth.m">half normal plot &amp; 
+		lenth method</a>)</span></td>
+																	</tr>
+		<tr>
+		<td style="border-style: none; border-width: medium" width="4%" align="center">
+		<p align="center"><span style="font-size: 11pt">-</span></td>
+		<td style="border-style: none; border-width: medium" align="left">
+		<span style="font-size: 11pt">Revisiting Original Epitaxial Layer Growth 
+		Experiment</span></td>
+																		</tr>
+		<tr>
+		<td style="border-style: none; border-width: medium" width="4%" align="center">
+		&nbsp;</td>
+		<td style="border-style: none; border-width: medium" align="left">
+		<span style="font-size: 11pt"><a href="ESI6247/originallayer.xlsx">data</a>&nbsp;&nbsp;&nbsp;&nbsp; 
+		<a href="ESI6247/Ch4_EpitaxialRevisited.m">program</a></span></td>
+																		</tr>
+		<tr>
+		<td style="border-style: none; border-width: medium" width="108%" align="left" colspan="2">
+		&nbsp;</td>
+																		</tr>
+		<tr>
+		<td style="border-style: none; border-width: medium" width="108%" align="left" colspan="2">
+		<b><font face="Book Antiqua" color="#003300">Chapter 5 
+		Fractional Factorial Experiments at Two Levels <font size="2">(<a href="ESI6247/Unit5%20-%20ESI6247_Lecture.pdf">Note</a>)</font></font></b></td>
+																		</tr>
+		<tr>
+		<td style="border-style: none; border-width: medium" width="4%" align="center">
+		<p align="center"><span style="font-size: 11pt">-</span></td>
+		<td style="border-style: none; border-width: medium" align="left">
+		<span style="font-size: 11pt">Leaf Spring Experiment</span></td>
+																			</tr>
+		<tr>
+		<td style="border-style: none; border-width: medium" width="4%" align="center">
+		&nbsp;</td>
+		<td style="border-style: none; border-width: medium" align="left">
+		<span style="font-size: 11pt"><a href="ESI6247/LeafSpring.xlsx">data</a>&nbsp;&nbsp;&nbsp;&nbsp; program 
+		(<a href="ESI6247/Ch5_LeafSpring_Halfnormalplot_Lenth.m">factorial 
+		effects &amp; half normal plot &amp; lenth method,</a>
+		<a href="ESI6247/Ch5_LeafSpring_InteractionPlots.m">interaction plots</a>)</span></td>
+																			</tr>
+		<tr>
+		<td style="border-style: none; border-width: medium" width="108%" align="left" colspan="2">
+		&nbsp;</td>
+																			</tr>
+		<tr>
+		<td style="border-style: none; border-width: medium" width="108%" align="left" colspan="2">
+		<b><font face="Book Antiqua" color="#003300">Chapter 10 
+		Response Surface Methodology <font size="2">(<a href="ESI6247/Unit6%20-%20ESI6247_Lecture.pdf">Note</a>)</font></font></b></td>
+																			</tr>
+		<tr>
+		<td style="border-style: none; border-width: medium" width="4%" align="center">
+		<p align="center"><span style="font-size: 11pt">-</span></td>
+		<td style="border-style: none; border-width: medium" align="left">
+		<span style="font-size: 11pt">Taylor Series</span></td>
+																				</tr>
+		<tr>
+		<td style="border-style: none; border-width: medium" width="4%" align="center">
+		&nbsp;</td>
+		<td style="border-style: none; border-width: medium" align="left">
+		<span style="font-size: 11pt">program (<a href="ESI6247/Ch10_TaylorSeries1.m">one 
+		dimension</a>, <a href="ESI6247/Ch10_TaylorSeries2.m">two dimension</a>)</span></td>
+																				</tr>
+		<tr>
+		<td style="border-style: none; border-width: medium" width="4%" align="center">
+		<p align="center"><span style="font-size: 11pt">-</span></td>
+		<td style="border-style: none; border-width: medium" align="left">
+		<span style="font-size: 11pt">Performance Optimization</span></td>
+																				</tr>
+		<tr>
+		<td style="border-style: none; border-width: medium" width="4%" align="center">
+		&nbsp;</td>
+		<td style="border-style: none; border-width: medium" align="left">
+		<span style="font-size: 11pt">program (<a href="ESI6247/Ch10_SteepestDescent.m">steepest 
+		descent</a>, <a href="ESI6247/Ch10_NewtonMethod.m">newton's method</a>,
+		<a href="ESI6247/Ch10_ConjugateGradient.m">conjugate gradient</a>)</span></td>
+																				</tr>
+		<tr>
+		<td style="border-style: none; border-width: medium" width="4%" align="left">
+		&nbsp;</td>
+		<td style="border-style: none; border-width: medium" align="left">
+		<p align="right">&nbsp;</td>
+																				</tr>
+		<tr>
+		<td style="border-style: none; border-width: medium" width="108%" align="left" colspan="2">
+		<b><font face="Book Antiqua" color="#003300">Chapter 11 Robust 
+		Parameter Design</font></b></td>
+																				</tr>
+		<tr>
+		<td style="border-style: none; border-width: medium" width="4%" align="center">
+		<p align="center"><span style="font-size: 11pt">-</span></td>
+		<td style="border-style: none; border-width: medium" align="left">
+		<span style="font-size: 11pt">Layer Growth Experiment</span></td>
+																					</tr>
+		<tr>
+		<td style="border-style: none; border-width: medium" width="4%" align="center">
+		&nbsp;</td>
+		<td style="border-style: none; border-width: medium" align="left">
+		<span style="font-size: 11pt">data&nbsp;(<a href="ESI6247/layergrowthcrossarray.xlsx">crossarray</a>,
+		<a href="ESI6247/layergrowthresponse.xlsx">response</a>)&nbsp;&nbsp;&nbsp; program 
+		(<a href="ESI6247/Ch11_interactionplot_layergrowth.m">interaction 
+		plots</a>,
+		<a href="ESI6247/Ch11_locationdispersionmodeling_layergrowth.m">location_dispersion_modeling</a>,
+		<a href="ESI6247/Ch11_responemodeling1_layergrowth.m">responsemodeling1</a>,
+		<a href="ESI6247/Ch11_responemodeling2_layergrowth.m">responsemodeling2</a>)</span></td>
+																					</tr>
+		<tr>
+		<td style="border-style: none; border-width: medium" width="4%" align="center">
+		<p align="center"><span style="font-size: 11pt">-</span></td>
+		<td style="border-style: none; border-width: medium" align="left">
+		<span style="font-size: 11pt">Leaf Spring Experiment</span></td>
+																					</tr>
+		<tr>
+		<td style="border-style: none; border-width: medium" width="4%" align="center">
+		&nbsp;</td>
+		<td style="border-style: none; border-width: medium" align="left">
+		<span style="font-size: 11pt">data&nbsp;(<a href="ESI6247/Ch11_leafspring.xlsx">leafspring</a>)&nbsp;&nbsp;&nbsp; program 
+		(<a href="ESI6247/Ch11_locationdispersionmodeling_leafspring.m">location_dispersion_modeling</a>)</span></td>
+																					</tr>
+		<tr>
+		<td style="border-style: none; border-width: medium" width="4%" align="left">
+		&nbsp;</td>
+		<td style="border-style: none; border-width: medium" align="left">
+		<p align="right">&nbsp;</td>
+																					</tr>
+		<tr>
+		<td style="border-style: none; border-width: medium" width="108%" align="left" colspan="2">
+		<b><font face="Book Antiqua" color="#003300">Chapter 13 Experiments for 
+		Reliability</font></b></td>
+																				</tr>
+		<tr>
+		<td style="border-style: none; border-width: medium" width="4%" align="center">
+		&nbsp;</td>
+		<td style="border-style: none; border-width: medium" align="left">
+		<span style="font-size: 11pt">program (<a href="ESI6247/Ch13_DegradationSimulation.m">simulation</a>,
+		<a href="ESI6247/Ch13_Degradationdatavisualiztion.m">visualization</a>,
+		<a href="ESI6247/Ch13_Degradationmodelestimation.m">degradation_estimation</a>,
+		<a href="ESI6247/Ch13_Reliabilitymodelestimation.m">reliability_estimation</a>)</span></td>
+																					</tr>
+		<tr>
+		<td style="border-style: none; border-width: medium" width="4%" align="center">
+		&nbsp;</td>
+		<td style="border-style: none; border-width: medium" align="left">
+		<span style="font-size: 11pt">data&nbsp;(<a href="ESI6247/Luminosity.xlsx">luminosity</a>)&nbsp;&nbsp;&nbsp; </span></td>
+																					</tr>
+		<tr>
+			<td style="border-style: none; border-width: medium" align="center" colspan="2">
+			&nbsp;</td>
+		</tr>
+		<tr>
+			<td style="border-style: none; border-width: medium" align="center" colspan="2">
+			<p align="left"><b><font face="Arial" size="2">Matlab Tutorials</font></b></td>
+		</tr>
+		<tr>
+			<td style="border-style: none; border-width: medium" align="center">
+			&nbsp;</td>
+			<td style="border-style: none; border-width: medium" align="center">
+			<p align="left" style="margin-top: 0; margin-bottom: 0">
+			<font face="Arial" size="2">
+			<a eudora="autourl" href="http://www.mathworks.com/academia/student_center/tutorials/launchpad.html">
+			http://www.mathworks.com/academia/student_center/tutorials/launchpad.html</a></font></p>
+			<p align="left" style="margin-top: 0; margin-bottom: 0">
+			<font face="Arial" size="2">
+			<a eudora="autourl" href="http://www.math.ufl.edu/help/matlab-tutorial/">
+			http://www.math.ufl.edu/help/matlab-tutorial/</a><br>
+			<a eudora="autourl" href="http://www.math.utah.edu/lab/ms/matlab/matlab.html">
+			http://www.math.utah.edu/lab/ms/matlab/matlab.html</a><br>
+			<a eudora="autourl" href="http://users.ece.gatech.edu/~bonnie/book/TUTORIAL/tutorial.html">
+			http://users.ece.gatech.edu/~bonnie/book/TUTORIAL/tutorial.html</a><br>
+			<a eudora="autourl" href="http://www.engin.umich.edu/group/ctm/">
+			http://www.engin.umich.edu/group/ctm/</a><br>
+			<a eudora="autourl" href="http://www.math.mtu.edu/~msgocken/intro/intro.html">
+			http://www.math.mtu.edu/~msgocken/intro/intro.html</a><br>
+			<a eudora="autourl" href="http://www.math.siu.edu/matlab/tutorials.html">
+			http://www.math.siu.edu/matlab/tutorials.html</a><br>
+			<a eudora="autourl" href="http://www.cyclismo.org/tutorial/matlab/">
+			http://www.cyclismo.org/tutorial/matlab/</a><br>
+			<a eudora="autourl" href="http://www.cs.ubc.ca/spider/cavers/MatlabGuide/guide.html">
+			http://www.cs.ubc.ca/spider/cavers/MatlabGuide/guide.html</a><br>
+			<a eudora="autourl" href="http://www.duke.edu/~hpgavin/matlab.html">
+			http://www.duke.edu/~hpgavin/matlab.html</a><br>
+			<a eudora="autourl" href="http://amath.colorado.edu/computing/Matlab/Tutorial/">
+			http://amath.colorado.edu/computing/Matlab/Tutorial/</a></font></p>
+			<p>&nbsp;</td>
+		</tr>
+		</table>
+</div>
+<p align="center">&nbsp;</p>
+
+</body>
+
+</html>
